@@ -1,5 +1,8 @@
 import { config } from './config';
 
+export { config } from './config';
+export type { Config } from './config';
+
 export function add(a: number, b: number): number {
   return a + b;
 }

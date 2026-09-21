@@ -9,7 +9,7 @@ module.exports = tseslint.config(
   {
     files: ['**/*.ts'],
     languageOptions: { globals: { console: 'readonly', process: 'readonly' } },
-    rules: { '@typescript-eslint/no-explicit-any': 'warn' },
+    rules: { '@typescript-eslint/no-explicit-any': 'error' },
   },
   prettier,
 );

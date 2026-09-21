@@ -1,5 +1,4 @@
-import { add, capitalize, formatNumber, groupBy, type User, Logger } from './index';
-import { config } from './config';
+import { add, capitalize, formatNumber, groupBy, type User, Logger, config } from './index';
 
 console.log('add:', add(2, 3));
 console.log('capitalize:', capitalize('hello'));
