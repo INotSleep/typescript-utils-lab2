@@ -61,8 +61,8 @@ test('config rejects invalid precision and log levels', () => {
 
 test('CJS and ESM entry points work and declaration files exist', () => {
   const scripts = [
-    `const { add } = require(${JSON.stringify(cjs)}); console.log(add(2, 3));`,
-    `import { add } from ${JSON.stringify(esm)}; console.log(add(2, 3));`,
+    `const { add } = require(${JSON.stringify(cjs)}); console.log(add([2, 3]));`,
+    `import { add } from ${JSON.stringify(esm)}; console.log(add([2, 3]));`,
   ];
   for (const [index, script] of scripts.entries()) {
     const result = spawnSync(

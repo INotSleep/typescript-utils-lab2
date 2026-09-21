@@ -2,10 +2,11 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { add, capitalize, config, formatNumber, groupBy, Logger } from '../src/index';
 
-test('add accepts numbers, including zero and negative values', () => {
-  assert.equal(add(2, 3), 5);
-  assert.equal(add(-2, 2), 0);
-  assert.equal(add(0, 0), 0);
+test('add accepts arrays, including empty arrays and negative values', () => {
+  assert.equal(add([2, 3]), 5);
+  assert.equal(add([-2, 2]), 0);
+  assert.equal(add([]), 0);
+  assert.equal(add([2, 3, 4]), 9);
 });
 
 test('capitalize handles normal, empty and Ukrainian strings', () => {

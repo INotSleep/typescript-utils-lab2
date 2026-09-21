@@ -1,6 +1,6 @@
 import { add, capitalize, formatNumber, groupBy, type User, Logger, config } from './index';
 
-console.log('add:', add(2, 3));
+console.log('add:', add([2, 3, 4]));
 console.log('capitalize:', capitalize('hello'));
 console.log('formatNumber:', formatNumber(123.456, { precision: 2 }));
 
