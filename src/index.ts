@@ -22,3 +22,17 @@ export function formatNumber(value: number, options?: NumberFormatOptions): stri
   }
   return value.toFixed(precision);
 }
+
+export interface User {
+  id: number;
+  name: string;
+}
+
+export function groupBy<T>(arr: T[], key: keyof T): Record<string, T[]> {
+  const groups: Record<string, T[]> = Object.create(null);
+  for (const item of arr) {
+    const value = String(item[key]);
+    (groups[value] ??= []).push(item);
+  }
+  return groups;
+}
