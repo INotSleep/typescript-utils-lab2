@@ -1,0 +1,52 @@
+{
+  "name": "typescript-utils-lab2",
+  "version": "0.0.0",
+  "description": "Small TypeScript utilities for lab 2",
+  "keywords": [
+    "typescript",
+    "utils"
+  ],
+  "homepage": "https://github.com/INotSleep/typescript-utils-lab2#readme",
+  "bugs": {
+    "url": "https://github.com/INotSleep/typescript-utils-lab2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INotSleep/typescript-utils-lab2.git"
+  },
+  "license": "MIT",
+  "author": "INotSleep",
+  "type": "commonjs",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^21.2.3",
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^24.13.6",
+    "commitlint": "^21.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "prettier": "^3.9.8",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
